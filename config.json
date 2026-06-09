@@ -1,0 +1,18 @@
+{
+  "botName": "Bot",
+  "botNumber": "628xxx",
+  "customPairingCode": "12345678",
+  "ownerNumber": ["628xxx", "628xxx"],
+  "timezone": "Asia/Jakarta",
+  "prefix": ["!", "#", "/", "."],
+  "settings": {
+    "ownerNotifyOnline": false,
+    "autoReadStatus": false,
+    "selfbot": false,
+    "publicMode": false,
+    "autoReadMessage": true,
+    "suggestSimilarCommands": true,
+    "useLimit": false,
+    "usePairingCode": false
+  }
+}

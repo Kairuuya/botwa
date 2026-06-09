@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env
+.agents
+docs/
+# Logs
+history/
+logs/
+temp
+.vscode
