@@ -3,7 +3,7 @@ import { join, relative } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import chokidar, { type FSWatcher } from 'chokidar';
 import { transformSync } from 'esbuild';
-import type { Logger } from '@/core/logger/pino.js';
+import type { Logger } from '../logger/pino.js';
 
 type LoaderConfig = {
   folder: string;
