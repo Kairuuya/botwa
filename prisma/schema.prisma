@@ -17,75 +17,12 @@ enum GroupRole {
   SUPERADMIN
 }
 
-// enum AiMessageRole {
-//     system
-//     user
-//     assistant
-// }    
-
 model BaileysAuth {
   sessionId String  @id
   session   String?
 
   @@map("baileys_auth")
 }
-
-// model System {
-//     id             Int      @id @default(1)
-//     maintenanceCmd String[] @default([])
-//     mode           String   @default("PUBLIC")
-//     updatedAt      DateTime @updatedAt
-
-//     @@map("systems")
-// }
-
-// model AiSession {
-//     id           String    @id @default(uuid())
-//     owner        String    @unique
-//     model        String    @default("google/gemini-2.0-flash-001")
-//     systemPrompt String
-//     temperature  Float     @default(0.7)
-//     maxTokens    Int       @default(1000)
-//     topP         Float     @default(1)
-//     expiresAt    DateTime?
-//     createdAt    DateTime  @default(now())
-//     updatedAt    DateTime  @updatedAt
-
-//     // Relations
-//     messages AiMessage[]
-
-//     @@index([owner])
-//     @@map("ai_sessions")
-// }
-
-// model AiMessage {
-//     id        String        @id @default(uuid())
-//     sessionId String
-//     role      AiMessageRole
-//     content   String
-//     createdAt DateTime      @default(now())
-
-//     // Relations
-//     session AiSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
-
-//     @@index([sessionId])
-//     @@index([sessionId, createdAt])
-//     @@map("ai_messages")
-// }
-
-// model AiUsageLog {
-//     id               String   @id @default(uuid())
-//     owner            String
-//     promptTokens     Int      @default(0)
-//     completionTokens Int      @default(0)
-//     totalTokens      Int      @default(0)
-//     model            String?
-//     createdAt        DateTime @default(now())
-
-//     @@index([owner])
-//     @@index([owner, createdAt])
-//     @@map("ai_usage_logs")
-// }
 
 model User {
   jid               String             @id
@@ -179,37 +116,4 @@ model Session {
   updatedAt DateTime @updatedAt
 
   @@map("sessions")
-}
-
-model rafs {
-  id                        Int        @id  @default(autoincrement())
-  production                String?    @map("Production")
-  itemNumber                String?    @map("Item number")
-  moduleid                  String?    @map("ModuleID")
-  namaProduk                String?    @map("Nama Produk")
-  picProcess                String?    @map("PIC Process")
-  picPacking                String?    @map("PIC Packing")
-  site                      String?    @map("Site")
-  warehouse                 String?    @map("Warehouse")
-  quantity                  Float?     @map("Quantity")
-  started                   Float?     @map("Started")
-  reportAsFinished          Float?     @map("Report as finished")
-  tanggal                   DateTime?  @map("Tanggal")
-  bomconsump                Float?     @map("BOMConsump")
-  bomproposal               Float?     @map("BOMProposal")
-  qtyAdjust                 Float?     @map("Qty Adjust")
-  started2                  DateTime?  @map("Started2")
-  ended                     DateTime?  @map("Ended")
-  status                    String?    @map("Status")
-  totalLoss                 Float?     @map("Total Loss")
-  hours                     Float?     @map("Hours")
-  manHours                  Float?     @map("Man Hours")
-  resultViskositas          Float?     @map("Result Viskositas")
-  resultSolidcontent        Float?     @map("Result SolidContent")
-  resultPh                  Float?     @map("Result pH")
-  pool                      String?    @map("Pool")
-  mesin                     String?    @map("Mesin")
-  productionType            String?    @map("Production Type")
-  totalMaterialConsumption  Float?     @map("Total Material Consumption")
-  bomNumber                 String?    @map("BOM number")
 }
