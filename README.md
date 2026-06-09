@@ -1,4 +1,4 @@
-# Hiorii WhatsApp Bot
+# BotWA
 
 A feature-rich, high-performance WhatsApp Bot built with TypeScript, Baileys, Prisma, and Redis.
 
@@ -15,10 +15,10 @@ A feature-rich, high-performance WhatsApp Bot built with TypeScript, Baileys, Pr
 
 ## Folder Structure
 
-Below is an overview of the Hiorii repository structure:
+Below is an overview of the BotWA repository structure:
 
 ```
-Hiorii/
+BotWA/
 ├── prisma/                 # Database schema configuration
 │   └── schema.prisma       # Prisma DB schema definition
 ├── src/                    # Bot source code
@@ -95,7 +95,7 @@ Ensure you have the following installed:
 
 1. Clone the repository and navigate inside:
    ```bash
-   cd Hiorii
+   cd botwa
    ```
 
 2. Run the installation script or install manually:
